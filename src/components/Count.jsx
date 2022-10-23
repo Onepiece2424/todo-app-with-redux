@@ -18,12 +18,7 @@ const Count = () => {
   return (
     <>
       <div>Countコンポーネント:{count}</div>
-      {/* <ul>
-        {posts.map((post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul> */}
-
+      <br></br>
       <button onClick={increase}>Up</button>
       <button onClick={decrease}>Down</button>
     </>
