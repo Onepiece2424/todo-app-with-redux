@@ -1,18 +1,31 @@
 import React from "react"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 
 
 const Count = () => {
-  const count = useSelector((state) => state.countReducer.count)
-  const posts = useSelector((state) => state.postsReducer.posts)
+  const count = useSelector((state) => state.count)
+
+  const dispatch = useDispatch();
+
+  const increase = () => {
+    dispatch({ type: "INCREASE_COUNT" });
+  };
+
+  const decrease = () => {
+    dispatch({ type: "DECREASE_COUNT" });
+  }
+
   return (
     <>
       <div>Countコンポーネント:{count}</div>
-      <ul>
+      {/* <ul>
         {posts.map((post) => (
           <li key={post.id}>{post.title}</li>
         ))}
-      </ul>
+      </ul> */}
+
+      <button onClick={increase}>Up</button>
+      <button onClick={decrease}>Down</button>
     </>
   )
 }

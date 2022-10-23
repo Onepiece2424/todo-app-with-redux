@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 
 // 各コンポーネント
 // import Greeting from './components/Greeting';
-// import Count from './components/Count';
+import Count from './components/Count';
 
 function App({ count, increase, decrease }) {
 
@@ -21,8 +21,10 @@ function App({ count, increase, decrease }) {
     <>
       <h1>Redux Learn</h1>
       <p>Count:{store.getState().count}</p>
-      <button onClick={increase}>Up</button>
-      <button onClick={decrease}>Down</button>
+      {/* <button onClick={increase}>Up</button>
+      <button onClick={decrease}>Down</button> */}
+
+      <Count />
     </>
   );
 }
