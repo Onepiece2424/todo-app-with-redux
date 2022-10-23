@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 // 各コンポーネント
 // import Greeting from './components/Greeting';
 import Count from './components/Count';
+import Post from './components/Post';
 
 function App({ count, increase, decrease }) {
 
@@ -25,6 +26,9 @@ function App({ count, increase, decrease }) {
       <button onClick={decrease}>Down</button> */}
 
       <Count />
+      <br></br>
+      <br></br>
+      <Post />
     </>
   );
 }
