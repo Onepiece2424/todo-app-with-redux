@@ -7,7 +7,7 @@ import Greeting from './components/Greeting';
 import Count from './components/Count';
 
 function App() {
-  
+
   return (
     <>
       <Greeting />
