@@ -7,7 +7,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'CASE_POST_DATA':
+    case 'GET_POST_DATA':
     return { ...state, posts: action.payload };
 
     default:
