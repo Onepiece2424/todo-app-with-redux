@@ -4,22 +4,21 @@ import store from "./store/index"
 import { connect } from "react-redux";
 
 // 各コンポーネント
-import Greeting from './components/Greeting';
+// import Greeting from './components/Greeting';
 // import Count from './components/Count';
 
-function App({ dispatch, count}) {
+function App({ count, increase, decrease }) {
 
-  const increase = () => {
-    dispatch({ type: "INCREASE_COUNT"});
-  };
+  // const increase = () => {
+  //   dispatch({ type: "INCREASE_COUNT"});
+  // };
 
-  const decrease = () => {
-    dispatch({ type: "DECREASE_COUNT"});
-  };
+  // const decrease = () => {
+  //   dispatch({ type: "DECREASE_COUNT"});
+  // };
 
   return (
     <>
-      <Greeting />
       <h1>Redux Learn</h1>
       <p>Count:{store.getState().count}</p>
       <button onClick={increase}>Up</button>
@@ -29,12 +28,16 @@ function App({ dispatch, count}) {
 }
 
 const mapStateToProps = (state) => {
+  return { count: state.count };
+};
+
+const mapDispatchToProps = (dispatch) => {
   return {
-    count: state.count,
-    posts: state.posts
+    increase: () => dispatch({ type: "INCREASE_COUNT" }),
+    decrease: () => dispatch({ type: "DECREASE_COUNT" }),
   }
 }
 
 // export default App;
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
