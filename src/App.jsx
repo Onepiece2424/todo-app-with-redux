@@ -1,10 +1,13 @@
 import './App.css';
+import React from "react"
+
+import Greeting from './components/Greeting';
 
 function App() {
   return (
-    <div>
-      Learn React
-    </div>
+    <>
+      <Greeting />
+    </>
   );
 }
 
