@@ -7,6 +7,9 @@ import { connect } from "react-redux";
 import Count from './components/Count';
 import Post from './components/Post';
 
+// Material-UI
+import { Grid } from '@material-ui/core';
+
 function App({ count, increase, decrease }) {
 
   return (
@@ -18,6 +21,21 @@ function App({ count, increase, decrease }) {
       <br></br>
       <br></br>
       <Post />
+      <div>
+      <Grid container direction="column">
+        <Grid item container>
+          <Grid sm={2} />
+          <Grid xs={12} sm={8}>
+            item2item2item2item2item2item2item2item2item2item2item2item2
+            item2item2item2item2item2item2item2item2item2item2item2item2
+            item2item2item2item2item2item2item2item2item2item2item2item2
+            item2item2item2item2item2item2item2item2item2item2item2item2
+            item2item2item2item2item2item2item2item2item2item2item2item2
+          </Grid>
+          <Grid sm={2} />
+        </Grid>
+      </Grid>
+      </div>
     </>
   );
 }
