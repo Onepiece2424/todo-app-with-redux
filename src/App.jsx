@@ -9,21 +9,18 @@ import Post from './components/Post';
 
 // Material-UI
 import { Grid } from '@material-ui/core';
+import Header from './components/Header';
 
-function App({ count, increase, decrease }) {
+function App() {
 
   return (
     <>
-      <h1>Redux Learn</h1>
-      <p>Count:{store.getState().count}</p>
-      <br></br>
-      <Count />
-      <br></br>
-      <br></br>
-      <Post />
       <div>
       <Grid container direction="column">
         <Grid item container>
+          <Grid item>
+            <Header />
+          </Grid>
           <Grid sm={2} />
           <Grid xs={12} sm={8}>
             item2item2item2item2item2item2item2item2item2item2item2item2
@@ -36,6 +33,15 @@ function App({ count, increase, decrease }) {
         </Grid>
       </Grid>
       </div>
+      <br></br>
+      <br></br>
+      <h1>Redux Learn</h1>
+      <p>Count:{store.getState().count}</p>
+      <br></br>
+      <Count />
+      <br></br>
+      <br></br>
+      <Post />
     </>
   );
 }
