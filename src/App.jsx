@@ -11,14 +11,25 @@ import Post from './components/Post';
 import { Grid } from '@material-ui/core';
 import Header from './components/Header';
 
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles(() => ({
+  container: {
+    position: "static",
+    padding: "5px",
+    width: "100%"
+  }
+}));
+
 function App() {
+
+  const classes = useStyles();
 
   return (
     <>
-      <div>
       <Grid container direction="column">
         <Grid item container>
-          <Grid item>
+          <Grid item  className={classes.container}>
             <Header />
           </Grid>
           <Grid sm={2} />
@@ -32,7 +43,6 @@ function App() {
           <Grid sm={2} />
         </Grid>
       </Grid>
-      </div>
       <br></br>
       <br></br>
       <h1>Redux Learn</h1>
