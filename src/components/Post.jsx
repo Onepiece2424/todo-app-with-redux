@@ -22,7 +22,7 @@ const Post = () => {
   }, [dispatch]);
 
 
-  console.log(posts)
+  // console.log(posts)
 
   return (
     <>

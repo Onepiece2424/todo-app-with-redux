@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 // 各コンポーネント
 import Count from './components/Count';
 import Post from './components/Post';
+import SetTimeOut from './components/SetTimeOut';
 
 // Material-UI
 import { Grid } from '@material-ui/core';
@@ -32,6 +33,11 @@ function App() {
           <Grid item  className={classes.container}>
             <Header />
           </Grid>
+          <br></br>
+          <br></br>
+          <SetTimeOut />
+          <br></br>
+          <br></br>
           <Grid sm={2} />
           <Grid xs={12} sm={8}>
             item2item2item2item2item2item2item2item2item2item2item2item2
@@ -66,7 +72,5 @@ const mapDispatchToProps = (dispatch) => {
     decrease: () => dispatch({ type: "DECREASE_COUNT" }),
   }
 }
-
-// export default App;
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
