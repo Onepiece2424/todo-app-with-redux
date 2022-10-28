@@ -14,6 +14,11 @@ const SetTimeOut = (() => {
     },3000)
   })
 
+  const hoge = (() => {
+    document.write("今日も良い天気だ")
+    document.getElementsByClassName("output").innerHTML = "当選しましたーーー"
+  })
+
   return (
     <>
       <p>{`${count}回クリックされました`}</p>
@@ -25,7 +30,7 @@ const SetTimeOut = (() => {
           リセット
         </Button>
       </ButtonGroup>
-      <div className='output'>
+      <div className='output' onLoad={setTimeout(hoge,3000)}>
         <Text />
       </div>
     </>
