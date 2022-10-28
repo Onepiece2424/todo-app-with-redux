@@ -16,7 +16,6 @@ const SetTimeOut = (() => {
 
   const hoge = (() => {
     document.write("今日も良い天気だ")
-    document.getElementsByClassName("output").innerHTML = "当選しましたーーー"
   })
 
   return (
