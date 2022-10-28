@@ -1,12 +1,17 @@
 import React, {useEffect, useState} from 'react'
 import ButtonGroup from '@material-ui/core/ButtonGroup'
 import Button from '@material-ui/core/Button'
+import Text from './Text'
 
 const SetTimeOut = (() => {
 
   const [count, setCount] = useState(0)
   useEffect(() => {
     document.title =`${count}回クリックされました`
+    console.log(`${count}回レンダリングしました。`)
+    setTimeout(() => {
+      console.log("こんにちは！")
+    },3000)
   })
 
   return (
@@ -20,6 +25,9 @@ const SetTimeOut = (() => {
           リセット
         </Button>
       </ButtonGroup>
+      <div className='output'>
+        <Text />
+      </div>
     </>
   )
 })
