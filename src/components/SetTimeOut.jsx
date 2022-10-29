@@ -7,26 +7,29 @@ const SetTimeOut = (() => {
 
   const [count, setCount] = useState(0)
 
+  // ページ更新1秒後に１度だけ行われる処理
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log("ページ更新1秒後、1回だけの処理です。")
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // countが変化したら行われる処理
   useEffect(() => {
     document.title =`${count}回クリックされました`
     console.log(`${count}回レンダリングしました。`)
     setTimeout(() => {
       console.log("こんにちは！")
     },3000)
-  })
+  }, [count])
 
+  // 3秒後にページ切り替えが起きる処理
   const hoge = (() => {
     setTimeout(() => {
       document.write("今日も良い天気だ")
     },3000)
   })
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCount('Timeout called!');
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <>
