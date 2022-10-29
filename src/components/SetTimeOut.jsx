@@ -24,15 +24,21 @@ const SetTimeOut = (() => {
     },3000)
   }, [count])
 
-  // 5秒後にページ切り替えが起きる処理
-  const hoge = (() => {
-    setTimeout(() => {
-      document.write("今日も良い天気だ")
-    },5000)
-  })
+  // // 5秒後にページ切り替えが起きる処理
+  // const hoge = (() => {
+  //   setTimeout(() => {
+  //     document.write("今日も良い天気だ")
+  //   },5000)
+  // })
 
-  hoge();
+  // hoge();
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log("あああ")
+    }, 500)
+    return () => clearTimeout(timer)
+  },[])
   return (
     <>
       <p>{`${count}回クリックされました`}</p>
@@ -45,7 +51,7 @@ const SetTimeOut = (() => {
         </Button>
       </ButtonGroup>
       <div className='output'>
-        <Text />
+        <Text  />
       </div>
     </>
   )
