@@ -18,17 +18,17 @@ const SetTimeOut = (() => {
   // countが変化したら行われる処理
   useEffect(() => {
     document.title =`${count}回クリックされました`
-    console.log(`${count}回レンダリングしました。`)
+    // console.log(`${count}回レンダリングしました。`)
     setTimeout(() => {
-      console.log("こんにちは！")
+      console.log("countが変化したらしいです!")
     },3000)
   }, [count])
 
-  // 3秒後にページ切り替えが起きる処理
+  // 5秒後にページ切り替えが起きる処理
   const hoge = (() => {
     setTimeout(() => {
       document.write("今日も良い天気だ")
-    },3000)
+    },5000)
   })
 
   return (
