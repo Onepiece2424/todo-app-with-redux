@@ -31,6 +31,8 @@ const SetTimeOut = (() => {
     },5000)
   })
 
+  hoge();
+
   return (
     <>
       <p>{`${count}回クリックされました`}</p>
@@ -42,7 +44,7 @@ const SetTimeOut = (() => {
           リセット
         </Button>
       </ButtonGroup>
-      <div className='output' onLoad={hoge()}>
+      <div className='output'>
         <Text />
       </div>
     </>
