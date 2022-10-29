@@ -47,9 +47,10 @@ const SetTimeOut = (() => {
 
   // 画面描画後に処理を実行
   useEffect(() => {
-    setTimeout (() => {
+    const display_text = setTimeout (() => {
       setText("表示されました！")     // テキストの表示
-    }, 500)                         // 5秒後
+    }, 500)
+    return () => clearTimeout(display_text)                         // 0.5秒後表示
   }, []);
 
   return (
