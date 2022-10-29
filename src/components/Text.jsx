@@ -3,7 +3,7 @@ import React from "react"
 const Text = (() => {
   return (
     <>
-      <div>おやすみ</div>
+      <div>隠しました。</div>
     </>
   )
 })

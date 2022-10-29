@@ -42,9 +42,6 @@ function App() {
           <Grid xs={12} sm={8}>
             item2item2item2item2item2item2item2item2item2item2item2item2
             item2item2item2item2item2item2item2item2item2item2item2item2
-            item2item2item2item2item2item2item2item2item2item2item2item2
-            item2item2item2item2item2item2item2item2item2item2item2item2
-            item2item2item2item2item2item2item2item2item2item2item2item2
           </Grid>
           <Grid sm={2} />
         </Grid>

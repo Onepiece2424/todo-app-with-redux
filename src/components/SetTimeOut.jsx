@@ -43,29 +43,42 @@ const SetTimeOut = (() => {
 
   // テキストのstateを定義
   const [text, setText] = useState("")
+  const [value, setValue] = useState(false)
 
   // 画面描画後に処理を実行
   useEffect(() => {
     setTimeout (() => {
       setText("表示されました！")     // テキストの表示
-    }, 5000)                          // 5秒後
-  });
+    }, 5000)                         // 5秒後
+  }, []);
 
   return (
     <>
-      <p>{`${count}回クリックされました`}</p>
-      <ButtonGroup color="primary" aria-label="outlined primary button group">
-        <Button onClick={() => setCount((prev) => prev + 1)}>
-          ボタン
-        </Button>
-        <Button onClick={() => setCount(0)}>
-          リセット
-        </Button>
-      </ButtonGroup>
-      <div className='output'>
-        <Text  />
-        <p>{`text:${text}`}</p>
+      <div>
+        <p>{`${count}回クリックされました`}</p>
+        <ButtonGroup color="primary" aria-label="outlined primary button group">
+          <Button onClick={() => setCount((prev) => prev + 1)}>
+            ボタン
+          </Button>
+          <Button onClick={() => setCount(0)}>
+            リセット
+          </Button>
+        </ButtonGroup>
       </div>
+      <br></br>
+      <br></br>
+      <div className='output'>
+        { value ?
+         <Text  />
+        :
+        <p>{`text:${text}`}</p>
+        }
+      </div>
+      <br></br>
+      <div>
+        <button onClick={() => setValue(!value)}>{value ? `テキストを表示するボタン` : `テキストを隠すボタン`}</button>
+      </div>
+      <br></br>
     </>
   )
 })
