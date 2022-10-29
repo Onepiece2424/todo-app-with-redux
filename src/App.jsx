@@ -35,15 +35,17 @@ function App() {
           </Grid>
           <br></br>
           <br></br>
-          <SetTimeOut />
-          <br></br>
-          <br></br>
           <Grid sm={2} />
           <Grid xs={12} sm={8}>
             item2item2item2item2item2item2item2item2item2item2item2item2
             item2item2item2item2item2item2item2item2item2item2item2item2
           </Grid>
           <Grid sm={2} />
+          <div>
+            <br></br>
+            <SetTimeOut />
+            <br></br>
+          </div>
         </Grid>
       </Grid>
       <br></br>

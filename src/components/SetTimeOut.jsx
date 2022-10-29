@@ -49,7 +49,7 @@ const SetTimeOut = (() => {
   useEffect(() => {
     setTimeout (() => {
       setText("表示されました！")     // テキストの表示
-    }, 5000)                         // 5秒後
+    }, 500)                         // 5秒後
   }, []);
 
   return (
