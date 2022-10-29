@@ -39,6 +39,18 @@ const SetTimeOut = (() => {
     }, 500)
     return () => clearTimeout(timer)
   },[])
+
+
+  // テキストのstateを定義
+  const [text, setText] = useState("")
+
+  // 画面描画後に処理を実行
+  useEffect(() => {
+    setTimeout (() => {
+      setText("表示されました！")     // テキストの表示
+    }, 5000)                          // 5秒後
+  });
+
   return (
     <>
       <p>{`${count}回クリックされました`}</p>
@@ -52,6 +64,7 @@ const SetTimeOut = (() => {
       </ButtonGroup>
       <div className='output'>
         <Text  />
+        <p>{`text:${text}`}</p>
       </div>
     </>
   )
