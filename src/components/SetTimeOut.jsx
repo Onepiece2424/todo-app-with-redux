@@ -6,6 +6,7 @@ import Text from './Text'
 const SetTimeOut = (() => {
 
   const [count, setCount] = useState(0)
+
   useEffect(() => {
     document.title =`${count}回クリックされました`
     console.log(`${count}回レンダリングしました。`)
@@ -15,8 +16,17 @@ const SetTimeOut = (() => {
   })
 
   const hoge = (() => {
-    document.write("今日も良い天気だ")
+    setTimeout(() => {
+      document.write("今日も良い天気だ")
+    },3000)
   })
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCount('Timeout called!');
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -29,7 +39,7 @@ const SetTimeOut = (() => {
           リセット
         </Button>
       </ButtonGroup>
-      <div className='output' onLoad={setTimeout(hoge,3000)}>
+      <div className='output' onLoad={hoge()}>
         <Text />
       </div>
     </>
