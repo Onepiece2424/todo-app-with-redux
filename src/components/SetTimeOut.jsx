@@ -55,10 +55,10 @@ const SetTimeOut = (() => {
     <>
       <p>{`${count}回クリックされました`}</p>
       <ButtonGroup color="primary" aria-label="outlined primary button group">
-        <Button onClick={()=>setCount((prev) => prev + 1)}>
+        <Button onClick={() => setCount((prev) => prev + 1)}>
           ボタン
         </Button>
-        <Button onClick={()=>setCount(0)}>
+        <Button onClick={() => setCount(0)}>
           リセット
         </Button>
       </ButtonGroup>
