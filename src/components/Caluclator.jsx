@@ -1,6 +1,6 @@
-import React from "react";
+import React, {memo} from "react";
 
-const Caluclator = (() => {
+const Caluclator = memo(() => {
 
   console.log("再レンダリングです。")
 
