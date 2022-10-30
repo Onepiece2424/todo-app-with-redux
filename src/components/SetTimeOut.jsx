@@ -9,6 +9,7 @@ const SetTimeOut = (() => {
   const [count, setCount] = useState(0)
   const [text, setText] = useState("")
   const [value, setValue] = useState(false)
+  const [number, setNumber] = useState(0)
 
   // ページ更新1秒後に１度だけ行われる処理
   useEffect(() => {
@@ -73,8 +74,8 @@ const SetTimeOut = (() => {
       <Caluclator />
       <br></br>
       <br></br>
-      <div>再レンダリング{count}回</div>
-      <button onClick={() => setCount(count + 1)}>再レンダリングボタン</button>
+      <div>再レンダリング{number}回</div>
+      <button onClick={() => setNumber(number + 1)}>再レンダリングボタン</button>
     </>
   )
 })
