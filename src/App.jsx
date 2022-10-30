@@ -1,10 +1,10 @@
 import './App.css';
 import React from "react"
-import store from "./store/index"
+// import store from "./store/index"
 import { connect } from "react-redux";
 
 // 各コンポーネント
-import Count from './components/Count';
+// import Count from './components/Count';
 import Post from './components/Post';
 import SetTimeOut from './components/SetTimeOut';
 
@@ -50,10 +50,6 @@ function App() {
       </Grid>
       <br></br>
       <br></br>
-      {/* <h1>Redux Learn</h1>
-      <p>Count:{store.getState().count}</p> */}
-      {/* <br></br>
-      <Count /> */}
       <br></br>
       <br></br>
       <Post />
