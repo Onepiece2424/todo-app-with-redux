@@ -3,6 +3,7 @@ import ButtonGroup from '@material-ui/core/ButtonGroup'
 import Button from '@material-ui/core/Button'
 import Text from './Text'
 import Caluclator from './Caluclator';
+import { useCallback } from 'react';
 
 const SetTimeOut = (() => {
 
@@ -45,10 +46,10 @@ const SetTimeOut = (() => {
     return () => clearTimeout(display_text)
   }, []);
 
-  // childCountの更新
-  const onClickChildCount = () => {
+  // childCountの更新、useCallbackを使用し、再レンダリングを防止
+  const onClickChildCount = useCallback(() => {
     setChildCount(childCount + 1)
-  };
+  }, [childCount]);
 
   return (
     <>
