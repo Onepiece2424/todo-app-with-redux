@@ -10,6 +10,7 @@ const SetTimeOut = (() => {
   const [text, setText] = useState("")
   const [value, setValue] = useState(false)
   const [number, setNumber] = useState(0)
+  const [childCount, setChildCount] = useState(0)
 
   // ページ更新1秒後に１度だけ行われる処理
   useEffect(() => {
@@ -44,6 +45,11 @@ const SetTimeOut = (() => {
     return () => clearTimeout(display_text)
   }, []);
 
+  // childCountの更新
+  const onClickChildCount = () => {
+    setChildCount(childCount + 1)
+  };
+
   return (
     <>
       <div>
@@ -71,11 +77,15 @@ const SetTimeOut = (() => {
         <button onClick={() => setValue(!value)}>{value ? `テキストを表示するボタン` : `テキストを隠すボタン`}</button>
       </div>
       <br></br>
-      <Caluclator />
+      <br></br>
+      <Caluclator onClick={onClickChildCount} />
+      <br></br>
       <br></br>
       <br></br>
       <div>再レンダリング{number}回</div>
-      <button onClick={() => setNumber(number + 1)}>再レンダリングボタン</button>
+      <div>
+        <button onClick={() => setNumber(number + 1)}>再レンダリングボタン</button>
+      </div>
     </>
   )
 })
