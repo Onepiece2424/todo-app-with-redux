@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import ButtonGroup from '@material-ui/core/ButtonGroup'
 import Button from '@material-ui/core/Button'
 import Text from './Text'
+import Caluclator from './Caluclator';
 
 const SetTimeOut = (() => {
 
@@ -69,6 +70,11 @@ const SetTimeOut = (() => {
         <button onClick={() => setValue(!value)}>{value ? `テキストを表示するボタン` : `テキストを隠すボタン`}</button>
       </div>
       <br></br>
+      <Caluclator />
+      <br></br>
+      <br></br>
+      <div>再レンダリング{count}回</div>
+      <button onClick={() => setCount(count + 1)}>再レンダリングボタン</button>
     </>
   )
 })
