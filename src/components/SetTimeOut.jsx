@@ -6,6 +6,8 @@ import Text from './Text'
 const SetTimeOut = (() => {
 
   const [count, setCount] = useState(0)
+  const [text, setText] = useState("")
+  const [value, setValue] = useState(false)
 
   // ページ更新1秒後に１度だけ行われる処理
   useEffect(() => {
@@ -24,15 +26,7 @@ const SetTimeOut = (() => {
     },3000)
   }, [count])
 
-  // // 5秒後にページ切り替えが起きる処理
-  // const hoge = (() => {
-  //   setTimeout(() => {
-  //     document.write("今日も良い天気だ")
-  //   },5000)
-  // })
-
-  // hoge();
-
+  // 0.5秒後にコンソールにテキスト表示
   useEffect(() => {
     const timer = setTimeout(() => {
       console.log("あああ")
@@ -40,17 +34,12 @@ const SetTimeOut = (() => {
     return () => clearTimeout(timer)
   },[])
 
-
-  // テキストのstateを定義
-  const [text, setText] = useState("")
-  const [value, setValue] = useState(false)
-
-  // 画面描画後に処理を実行
+  // 画面更新0.5秒後にテキスト表示
   useEffect(() => {
     const display_text = setTimeout (() => {
-      setText("表示されました！")     // テキストの表示
+      setText("表示されました！")
     }, 500)
-    return () => clearTimeout(display_text)                         // 0.5秒後表示
+    return () => clearTimeout(display_text)
   }, []);
 
   return (
