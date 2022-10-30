@@ -7,12 +7,14 @@ import { connect } from "react-redux";
 // import Count from './components/Count';
 import Post from './components/Post';
 import SetTimeOut from './components/SetTimeOut';
+import EvenNumber from './components/EvenNumber';
 
 // Material-UI
 import { Grid } from '@material-ui/core';
 import Header from './components/Header';
 
 import { makeStyles } from '@material-ui/styles';
+
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -50,6 +52,7 @@ function App() {
       </Grid>
       <br></br>
       <br></br>
+      <EvenNumber />
       <br></br>
       <br></br>
       <Post />
