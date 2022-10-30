@@ -3,17 +3,18 @@ import React from "react"
 // import store from "./store/index"
 import { connect } from "react-redux";
 
-// 各コンポーネント
-// import Count from './components/Count';
-import Post from './components/Post';
-import SetTimeOut from './components/SetTimeOut';
-import EvenNumber from './components/EvenNumber';
-
 // Material-UI
 import { Grid } from '@material-ui/core';
 import Header from './components/Header';
 
 import { makeStyles } from '@material-ui/styles';
+
+// 各コンポーネント
+// import Count from './components/Count';
+import Post from './components/Post';
+import SetTimeOut from './components/SetTimeOut';
+import EvenNumber from './components/EvenNumber';
+import Hallowin from './components/Hallowin';
 
 
 const useStyles = makeStyles(() => ({
@@ -53,6 +54,9 @@ function App() {
       <br></br>
       <br></br>
       <EvenNumber />
+      <br></br>
+      <br></br>
+      <Hallowin />
       <br></br>
       <br></br>
       <Post />
