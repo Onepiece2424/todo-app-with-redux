@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useMemo} from 'react'
 import ButtonGroup from '@material-ui/core/ButtonGroup'
 import Button from '@material-ui/core/Button'
 import Text from './Text'
@@ -51,6 +51,14 @@ const SetTimeOut = (() => {
     setChildCount(childCount + 1)
   }, [childCount]);
 
+  // countを2倍にし、表示
+  const doubleCount = (count) => {
+    console.log("call doublecount")
+    return (count * 2);
+  }
+
+  const doubledCount = useMemo(() => doubleCount(count), [count]);
+
   return (
     <>
       <div>
@@ -79,6 +87,10 @@ const SetTimeOut = (() => {
       </div>
       <br></br>
       <br></br>
+      <p>Count Up</p>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>count up!</button>
+      <p>{doubledCount}</p>
       <Caluclator onClick={onClickChildCount} />
       <br></br>
       <br></br>
