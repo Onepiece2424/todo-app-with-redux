@@ -5,6 +5,7 @@ const EvenNumber = (() => {
   const [birthday, setBirthday] = useState(0)
   const [ count, setCount ] = useState(0);
 
+  // 更新ボタンクリックごとにコンソールにテキスト表示
   useEffect(() => {
     const countUp = (() => {
       if (birthday % 2 === 0) {
@@ -14,6 +15,7 @@ const EvenNumber = (() => {
     countUp();
   }, [birthday])
 
+  // 自動カウンターの処理
   useEffect(() => {
     const time = setInterval(() => {
         setCount(prevCount => prevCount + 1);
