@@ -15,7 +15,7 @@ import Post from './components/Post';
 import SetTimeOut from './components/SetTimeOut';
 import EvenNumber from './components/EvenNumber';
 import Hallowin from './components/Hallowin';
-
+import Color from './components/Color';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -57,6 +57,9 @@ function App() {
       <br></br>
       <br></br>
       <Hallowin />
+      <br></br>
+      <br></br>
+      <Color />
       <br></br>
       <br></br>
       <Post />
