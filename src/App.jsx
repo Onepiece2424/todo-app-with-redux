@@ -50,10 +50,10 @@ function App() {
       </Grid>
       <br></br>
       <br></br>
-      <h1>Redux Learn</h1>
-      <p>Count:{store.getState().count}</p>
-      <br></br>
-      <Count />
+      {/* <h1>Redux Learn</h1>
+      <p>Count:{store.getState().count}</p> */}
+      {/* <br></br>
+      <Count /> */}
       <br></br>
       <br></br>
       <Post />
