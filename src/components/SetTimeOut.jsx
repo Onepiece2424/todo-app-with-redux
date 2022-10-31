@@ -1,9 +1,9 @@
-import React, {useEffect, useState, useMemo} from 'react'
+import React, {useEffect, useState, useMemo, useCallback} from 'react'
 import ButtonGroup from '@material-ui/core/ButtonGroup'
 import Button from '@material-ui/core/Button'
 import Text from './Text'
 import Caluclator from './Caluclator';
-import { useCallback } from 'react';
+import NewExpense from './NewExpense';
 
 const SetTimeOut = (() => {
 
@@ -99,6 +99,9 @@ const SetTimeOut = (() => {
       <div>
         <button onClick={() => setNumber(number + 1)}>再レンダリングボタン</button>
       </div>
+      <br></br>
+      <br></br>
+      <NewExpense />
     </>
   )
 })
