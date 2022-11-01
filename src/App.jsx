@@ -11,11 +11,13 @@ import { makeStyles } from '@material-ui/styles';
 
 // 各コンポーネント
 // import Count from './components/Count';
-import Post from './components/Post';
+// import Post from './components/Post';
 import SetTimeOut from './components/SetTimeOut';
 import EvenNumber from './components/EvenNumber';
 import Hallowin from './components/Hallowin';
 import Color from './components/Color';
+
+import ReduxForm from './components/ReduxForm';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -53,6 +55,9 @@ function App() {
       </Grid>
       <br></br>
       <br></br>
+      <ReduxForm />
+      <br></br>
+      <br></br>
       <EvenNumber />
       <br></br>
       <br></br>
@@ -62,7 +67,9 @@ function App() {
       <Color />
       <br></br>
       <br></br>
-      <Post />
+      {/* <Post /> */}
+      <br></br>
+      <br></br>
     </>
   );
 }
